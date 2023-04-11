@@ -3,7 +3,7 @@
 # 对于python3.8或更高版本，请将time.clock()替换为time.time()
 
 from __future__ import print_function
-from LangSupport import splitChinese
+from .LangSupport import splitChinese
 import copy
 import glob
 import os
@@ -17,11 +17,11 @@ import xml.sax
 from collections import namedtuple
 from configparser import ConfigParser
 
-from constants import *
-import DefaultSubs, Utils
-from AimlParser import create_parser
-from PatternMgr import PatternMgr
-from WordSub import WordSub
+from .constants import *
+from . import DefaultSubs, Utils
+from .AimlParser import create_parser
+from .PatternMgr import PatternMgr
+from .WordSub import WordSub
 
 def msg_encoder( encoding=None ):
     """  返回一个 with a pair of functions to encode/decode 消息  的命名元组。
